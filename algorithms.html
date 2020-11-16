@@ -42,6 +42,8 @@
 
 									<h2>Formulation</h2>
 
+									<p>Given an epidemiological model on a social network in a small community, what is the best way to rewire the network and keep node degrees constant such that the magnitude of an outbreak is minimized? With the purpose defined, this project focuses on how to rewire a network while keeping every individual’s degree constant. The purpose of maintaining the node degrees constant is to impose on the workload or necessary care of individuals and maintain the overall social structure the same. The essence of rewiring is that we assume that the infected individuals’ connection with their susceptible neighbors would be removed, a new connection to a recovered individual will be established, and their susceptible neighbors will be connected to a recovered individual. This is called a swap and it replaces the edges (𝑆−𝐼, 𝑅−𝑅) with (𝑆−𝑅, 𝐼−𝑅), thus maintaining all node degrees the same</p>
+
 									<span class="image main"><img src="images/formulation.jpg" alt="" /></span>
 
 
@@ -191,31 +193,10 @@ def reduce_link_eigen(Graph, node_status, budget):
 									</header>
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
-										<li><a href="generic.html">Generic</a></li>
+										<li><a href="generic.html">Introduction</a></li>
+										<li><a href="algorithms.html">Algorithms</a></li>
 										<li><a href="elements.html">Elements</a></li>
-										<li>
-											<span class="opener">Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Etiam Dolore</a></li>
-										<li><a href="#">Adipiscing</a></li>
-										<li>
-											<span class="opener">Another Submenu</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Maximus Erat</a></li>
-										<li><a href="#">Sapien Mauris</a></li>
-										<li><a href="#">Amet Lacinia</a></li>
+										
 									</ul>
 								</nav>
 
