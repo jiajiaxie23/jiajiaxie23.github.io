@@ -48,7 +48,7 @@
 
 									<span class="image main"><img src="images/formulation.jpg" alt="" /></span>
 
-									<p>𝑊(𝑣𝑖, 𝑣𝑗) denotes the weight of each edge (𝑣𝑖, 𝑣𝑗) ∈ 𝐸. The last constraint is a budget constraint which controls the number of edges rewiring to be less than or equal to 𝑘. Note that this problem is NP-hard by the property of integer programming problems. In the next section, we will design approximating algorithms, GreedySI, and GreedySI+, to solve for it.</p>
+									<p>𝑊(𝑣𝑖, 𝑣𝑗) and C(𝑣𝑖, 𝑣𝑗) denotes the weight and costs of each edge (𝑣𝑖, 𝑣𝑗) ∈ 𝐸. The last constraint is a budget constraint which controls the number of edges rewiring to be less than or equal to 𝑘. Note that this problem is NP-hard by the property of integer programming problems. In the next section, we will design approximating algorithms, GreedySI, and GreedySI+, to solve for it.</p>
 
 
 									<hr class="major" />
@@ -56,7 +56,7 @@
 									<h2>GreedySI</h2>
 
 
-									<p>The first proposed algorithm for solving the prob-lem formulated in the last section with 𝑊(𝑣𝑖, 𝑣𝑗)= 1 for every (𝑣𝑖, 𝑣𝑗) ∈ 𝐸 is GreedySI. In GreedySI, steps 5-12 divide edges into 𝑆 and pre-sorted 𝑅 set in ascending order based on cost of edges based on their category. Then, the algorithm loops over every 𝑆𝐼 edge from 𝑆 to find a candidate 𝑆𝑅 or 𝑅𝑅 edge in 𝑅 to rewire. The time complexity of GreedySI is 𝑂(𝑘𝑛2).</p>
+									<p>The first proposed algorithm for solving the problem formulated in the last section with 𝑊(𝑣𝑖, 𝑣𝑗)= 1 for every (𝑣𝑖, 𝑣𝑗) ∈ 𝐸 is GreedySI. In GreedySI, steps 5-12 divide edges into 𝑆 and pre-sorted 𝑅 set in ascending order based on cost of edges based on their category. Then, the algorithm loops over every 𝑆𝐼 edge from 𝑆 to find a candidate 𝑆𝑅 or 𝑅𝑅 edge in 𝑅 to rewire. The time complexity of GreedySI is 𝑂(𝑘𝑛2).</p>
 
 																						<pre><code>
 def reduce_link(Graph, node_status, budget):
@@ -104,7 +104,7 @@ def reduce_link(Graph, node_status, budget):
 									<h2>GreedySI+</h2>
 
 
-									<p>We propose a improved version of GreedySI, GreedySI+, as the approach to solve for the weighted sum of risk problem formulated above. Given a contact network 𝐺(𝑉,𝐸), the weight for each edge (𝑣𝑖,𝑣𝑗) ∈ 𝐸 is defined as: 𝑊(𝑣𝑖,𝑣𝑗) = 𝑝𝑣𝑖∗𝑞𝑣𝑗 where 𝑝 , 𝑞 are the left and right eigenvectors of the adjacency matrix 𝐴 of 𝐺(𝑉,𝐸) respectively corresponding to the greatest eigenvalues. The above defined weight is a good approximation of the number of decrease in the leading eigenvalue of the adja-cency matrix if removing edge (𝑣𝑖,𝑣𝑗) from the graph 𝐺(𝑉,𝐸)</p>
+									<p>We propose an improved version of GreedySI, GreedySI+, as the approach to solve for the weighted sum of risk problem formulated above. Given a contact network 𝐺(𝑉,𝐸), the weight for each edge (𝑣𝑖,𝑣𝑗) ∈ 𝐸 is defined as: 𝑊(𝑣𝑖,𝑣𝑗) = 𝑝𝑣𝑖∗𝑞𝑣𝑗 where 𝑝 , 𝑞 are the left and right eigenvectors of the adjacency matrix 𝐴 of 𝐺(𝑉,𝐸) respectively corresponding to the greatest eigenvalues. The above defined weight is a good approximation of the number of decrease in the leading eigenvalue of the adja-cency matrix if removing edge (𝑣𝑖,𝑣𝑗) from the graph 𝐺(𝑉,𝐸)</p>
 																						<pre><code>
 def get_W(G):
 
