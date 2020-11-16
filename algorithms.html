@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Editorial by HTML5 UP</title>
+		<title>Algorithms</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -44,7 +44,11 @@
 
 									<p>Given an epidemiological model on a social network in a small community, what is the best way to rewire the network and keep node degrees constant such that the magnitude of an outbreak is minimized? With the purpose defined, this project focuses on how to rewire a network while keeping every individual’s degree constant. The purpose of maintaining the node degrees constant is to impose on the workload or necessary care of individuals and maintain the overall social structure the same. The essence of rewiring is that we assume that the infected individuals’ connection with their susceptible neighbors would be removed, a new connection to a recovered individual will be established, and their susceptible neighbors will be connected to a recovered individual. This is called a swap and it replaces the edges (𝑆−𝐼, 𝑅−𝑅) with (𝑆−𝑅, 𝐼−𝑅), thus maintaining all node degrees the same</p>
 
+									<p>Let 𝑥𝑖𝑗  for 𝑖, 𝑗 ∈ 𝑁 be the decision variables, where 𝑁={1,2,3...𝑛}. Let 𝑘 be a budget of edges rewiring. We formulate the problem as a deterministic integer programming problem:</p>
+
 									<span class="image main"><img src="images/formulation.jpg" alt="" /></span>
+
+									<p>𝑊(𝑣𝑖, 𝑣𝑗) denotes the weight of each edge (𝑣𝑖, 𝑣𝑗) ∈ 𝐸. The last constraint is a budget constraint which controls the number of edges rewiring to be less than or equal to 𝑘. Note that this problem is NP-hard by the property of integer programming problems. In the next section, we will design approximating algorithms, GreedySI, and GreedySI+, to solve for it.</p>
 
 
 									<hr class="major" />
