@@ -105,6 +105,8 @@ def reduce_link(Graph, node_status, budget):
 
 
 									<p>We propose an improved version of GreedySI, GreedySI+, as the approach to solve for the weighted sum of risk problem formulated above. Given a contact network 𝐺(𝑉,𝐸), the weight for each edge (𝑣𝑖,𝑣𝑗) ∈ 𝐸 is defined as: 𝑊(𝑣𝑖,𝑣𝑗) = 𝑝𝑣𝑖∗𝑞𝑣𝑗 where 𝑝 , 𝑞 are the left and right eigenvectors of the adjacency matrix 𝐴 of 𝐺(𝑉,𝐸) respectively corresponding to the greatest eigenvalues. The above defined weight is a good approximation of the number of decrease in the leading eigenvalue of the adja-cency matrix if removing edge (𝑣𝑖,𝑣𝑗) from the graph 𝐺(𝑉,𝐸)</p>
+
+									<p>In GreedySI+, SI edges and (RR, SR) edges are sorted in ascending order based on the product of two leading eigenvalues. By the property of this greedy algorithm, an SI edge with high importance with respect to the leading eigenvalue will be swapped with a RR or SR edge with high importance as well. Since the leading eigenvalue contributes to the bound of the reproduction number, R0, of agent-based models, we expect the SIR model has a lower R0 by running GreedySI+.</p>
 																						<pre><code>
 def get_W(G):
 
@@ -199,7 +201,7 @@ def reduce_link_eigen(Graph, node_status, budget):
 										<li><a href="index.html">Homepage</a></li>
 										<li><a href="generic.html">Introduction</a></li>
 										<li><a href="algorithms.html">Algorithms</a></li>
-										<li><a href="elements.html">Elements</a></li>
+										<li><a href="results.html">Results</a></li>
 										
 									</ul>
 								</nav>

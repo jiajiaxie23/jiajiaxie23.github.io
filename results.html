@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Results</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Editor</strong> Jiajia Xie</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Experimental Results</h1>
+									</header>
+
+									<hr class="major" />
+
+									<h2>Closeness to the Optimal Solution</h2>
+
+
+
+									
+
+									<p><span class="image left"><img src="images/regular.png" alt="" /></span>First we run our intervention algorithms on a regular network with 100 nodes and average degree 6 with interventions, 𝛽 = 0.2/24, 𝛾 = 0.07/24. We start the simula-tion with 5% infected individuals and run the simulation 10 times.  We experiment with this particular case because minAreg gives us the optimal solution and we can compare how our approximations do compared to the optimal one. </p>
+
+									<p>The algorithms minAreg guarantees an optimal solution because it works by exhaustively connecting I nodes to other I and R nodes and then connecting the remaining edges. For example if there are more I nodes than degree k, we can connect them with each other and we will have no SI edges without needing to make an IR edge. The problem of a degree distribution becoming unfeasible is too hard because of the regularity in the network. </p>
+
+									<p>There is an infinite number of budget being used here.</p>
+
+
+									<hr class="major" />
+
+									<h2>Limited Budgets</h2>
+
+									<p><span class="image left"><img src="images/budget_controlhour.jpg" alt="" /></span>Final Recovered Fraction on ia-enron-only network with different intervention budget. 𝛽 =0.2/24$, 𝛾  = 0.1/24$. We start the simulation with 1 $\%$ infected individuals and run the simulation 15 times. Index 0 means no intervention. Index 60 means infinite budgets. Budgets in [0,5,10,20,30,40,50, infinite]</p>
+
+
+									<p>In this part, we compare the performance of GreedySI and GreedySI+ with controlled in variant intervention budget. The experimental result will answer question like: what is the minimum of intervention budgets needed to quickly bring down the size of an outbreak?</p>
+
+									<p>We present the experimental result on ia-enron-only, which is a network with 143 nodes and 623 edges, for with various intervention budgets. The results implies that for both GreedySI and GreedySI, as budgets get larger, the size of an outbreak could be further reduced. However, after the budget is larger than a certain threshold, the size of an outbreak will remain nearly unchanged.</p>
+
+									<p>As seen, GreedySI+ outperforms because it eliminates SI edges in a order such that the upper bound for the outbreak threshold drops significantly.</p>
+
+
+
+
+
+
+
+									<hr class="major" />
+
+									<h2>Initial Valid Time</h2>
+
+
+									<p><span class="image left"><img src="images/time_controlhour.jpg" alt="" /></span>In this part, we compare the performance of GreedySI and GreedySI+ with controlled in variant start time given a low or high budget. The experimental result will answer question like: when should we apply these algorithms in practice to minimize the size of an outbreak if given a low budget or high budget? </p>
+
+									<p>We present the experimental result on ia-enron-only for both low and high budget. The result implies an increasing budget for GreedySI requires an delayed intervention in order to minimize the size of an outbreak.</p>
+																					
+
+
+
+
+
+
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<li><a href="generic.html">Introduction</a></li>
+										<li><a href="algorithms.html">Algorithms</a></li>
+										<li><a href="results.html">Results</a></li>
+										
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>Please email Jiajia Xie for any question and concern.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">jxie315@gatech.edu</a></li>
+										<li class="icon solid fa-home">North Ave NW, Atlanta<br />
+										Georgia, 30318</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
